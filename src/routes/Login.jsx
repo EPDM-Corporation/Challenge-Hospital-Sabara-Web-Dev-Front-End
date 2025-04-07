@@ -3,6 +3,7 @@ import Image from "../assets/Logo.png";
 import './Login.css';
 
 const Login = () => {
+  console.log('Hello World')
   return (
     <section className='login'>
       <div id='login-box'>
