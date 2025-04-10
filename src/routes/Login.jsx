@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import Image from "../assets/Logo.png";
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
+  const Navigate = useNavigate();
+
   const userLogin = (e) => {
     e.preventDefault();
-    
+    Navigate('/home');
   }
   return (
     <section className='login'>
