@@ -41,22 +41,29 @@
     flex-direction: column;
     align-items: center;
 }
-#login-box>*{
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-box>form>*{
     margin: 15px;
 }
 
-#login-box>input{
+.loginInput{
     border-radius: 20px;
     border:0px;
     width: 80%;
     max-width: 304px;
     height: 30px;
 }
-#login-box>input::placeholder{
+.loginInput::placeholder{
     text-align: center;
 }
 
-#login-box>button{
+.loginButton{
     width: 70%;
     max-width: 222px;
     height: 44px;
@@ -69,12 +76,16 @@
     font-weight: 500;
 }
 
-#login-box>button:hover{
+.loginButton:hover{
     background-color: #003768;
 }
 
 #login-box>*{
     margin: 15px;
+}
+
+.login-problem{
+    color: #ff6161;
 }
 
 /* MOBILE */
@@ -89,6 +100,6 @@
     #login-box{
         height: 100vh;
         width: 248px;
-        height: 324px;
+        height: 430px;
     }
 }
