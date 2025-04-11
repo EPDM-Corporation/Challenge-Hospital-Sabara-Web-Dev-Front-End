@@ -1,0 +1,12 @@
+header{
+    background-color: #0056A3;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    height: 44px;
+    margin: 20px;
+}
+

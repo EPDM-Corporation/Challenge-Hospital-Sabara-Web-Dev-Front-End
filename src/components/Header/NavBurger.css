@@ -1,0 +1,33 @@
+.buttonMenu{
+    margin: 30px;
+}
+#menuLateral{
+    background-color: #0056A3;
+    min-width: 206px;
+    width: 40%;
+}
+
+#profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+}
+#pfp{
+    height: 53px;
+    max-width: 53px;
+    border-radius: 30px;
+}
+.profileText{
+    color: white;
+    font-weight: bold;
+}
+.navText{
+    color: white;
+    text-decoration: none;
+    font-size:20px;
+}
+.navText:hover{
+    text-decoration: underline;
+}
