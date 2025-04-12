@@ -1,6 +1,6 @@
 footer{
     background-color: #0056A3;
-    margin-top: 80vh;
+    margin-top: 50vh;
     height: 130px;
 }
 
@@ -21,8 +21,8 @@ footer{
     word-wrap: break-word;
     max-width: 218px;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     footer{
-        margin-top: 90vh;
+        margin-top: 50vh;
     }
-}
+} */
