@@ -1,12 +1,53 @@
 header{
     background-color: #0056A3;
-    min-height: 66px;
+    
+    height: 111px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 #logo{
-    height: 44px;
+    height: 75px;
+    margin: 50px;
+}
+
+#mobileDesign{
+    display: none;
+}
+
+#desktopDesign{
+    display: contents;
+}
+#desktopNav{
+    display: flex;
+    align-items: center;
+    
+}
+
+.desktopText{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
     margin: 20px;
 }
 
+.desktopText:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        height: 66px;
+    }   
+    #logo{
+        height: 44px;
+        margin: 20px;
+    }
+    #mobileDesign{
+        display: contents;
+    }
+    #desktopDesign{
+        display: none;
+    }
+}

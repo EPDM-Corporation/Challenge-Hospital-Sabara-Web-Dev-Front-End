@@ -7,22 +7,7 @@
     width: 40%;
 }
 
-#profile{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 11px;
 
-}
-#pfp{
-    height: 53px;
-    max-width: 53px;
-    border-radius: 30px;
-}
-.profileText{
-    color: white;
-    font-weight: bold;
-}
 .navText{
     color: white;
     text-decoration: none;
