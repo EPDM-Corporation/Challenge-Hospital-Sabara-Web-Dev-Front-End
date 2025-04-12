@@ -1,15 +1,24 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import './NavProfile.css'
-import Profile from '../../assets/andrepfp.png'
+import Image from '/public/andrepfp.png'
 
 const NavProfile = () => {
+    const [profileName, setProfileName] = useState(null);
+    const [profileImage, setProfileImage] = useState(null);
+
+    useEffect(() => {
+    let usuarioSalvo = JSON.parse(localStorage.getItem("user"));
+    console.log(usuarioSalvo['profileImage'])
+    setProfileName(usuarioSalvo['displayName'])
+    setProfileImage(usuarioSalvo['profileImage'])
+    }, []);
   return (
     <div>
         <div id='profile'>
-            <img src={Profile} alt="" id='pfp' />
+            <img src={profileImage} alt="" id='pfp' />
             <div>
-                <div className='profileText'>André Matos</div>
+                <div className='profileText'>{profileName}</div>
                 <Link to={"/"} id='exitButton'>Sair</Link>
             </div>
         </div>

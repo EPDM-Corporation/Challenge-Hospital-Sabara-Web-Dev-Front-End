@@ -2,11 +2,13 @@
     {
         "name":"andre",
         "displayName":"André Mattos",
-        "password":"medico123"
+        "password":"medico123",
+        "profileImage":"/public/andrepfp.png"
     },
     {
         "name":"nicolas",
         "displayName":"Nicolas Ferreira",
-        "password":"medico321"
+        "password":"medico321",
+        "profileImage":"/public/nicolaspfp.png"
     }
 ]

@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css'
 import Header from '../components/Header/Header'
-import Footer from '../components/Footer'
-
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
   const [userDisplay, setUserDisplay] = useState(null);
   useEffect(() => {
     let usuarioSalvo = JSON.parse(localStorage.getItem("user"));
-    console.log(usuarioSalvo['displayName'])
     setUserDisplay(usuarioSalvo['displayName'])
   }, []);
   return (
