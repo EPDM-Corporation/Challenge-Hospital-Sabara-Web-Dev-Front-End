@@ -1,10 +1,14 @@
 [
     {
         "name":"andre",
-        "password":"medico123"
+        "displayName":"André Mattos",
+        "password":"medico123",
+        "profileImage":"/public/andrepfp.png"
     },
     {
-        "name":"nicolas123@gmail.com",
-        "password":"medico321"
+        "name":"nicolas",
+        "displayName":"Nicolas Ferreira",
+        "password":"medico321",
+        "profileImage":"/public/nicolaspfp.png"
     }
 ]
