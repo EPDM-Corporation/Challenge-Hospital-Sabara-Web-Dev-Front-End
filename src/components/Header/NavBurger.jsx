@@ -1,8 +1,9 @@
 import React from 'react'
-import './NavBurger.css'
+import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Profile from '../../assets/andrepfp.png'
+import './NavBurger.css'
+import NavProfile from '../NavProfile/NavProfile'
 
 
 const NavBurger = () => {
@@ -25,11 +26,7 @@ const NavBurger = () => {
         aria-labelledby="menuLateralLabel"
       >
         <div className="offcanvas-header">
-          <div id='profile'>
-            <img src={Profile} alt="" id='pfp' />
-            <div className='profileText'>André Matos</div>
-          </div>
-          
+          <NavProfile/>
           <button
             type="button"
             className="btn-close btn-close-white"
@@ -40,8 +37,8 @@ const NavBurger = () => {
         </div>
         <div className="offcanvas-body">
           <ul className="list-unstyled">
-            <li><a className="navText" href="#">Tarefas</a></li>
-            <li><a className="navText" href="#">Sobre</a></li>
+            <li><Link to={"/home"} className='navText'>Tarefas</Link></li>
+            <li><Link to={"/"} className='navText'>Sobre</Link></li>
           </ul>
         </div>
       </div>

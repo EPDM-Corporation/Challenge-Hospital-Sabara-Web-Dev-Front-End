@@ -1,0 +1,30 @@
+#profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin: 70px;
+}
+#pfp{
+    height: 53px;
+    max-width: 53px;
+    border-radius: 30px;
+}
+.profileText{
+    color: white;
+    font-weight: bold;
+}
+
+#exitButton{
+    color: white;
+    text-decoration: none;
+}
+
+#exitButton:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    #profile{
+        margin: 0px;
+    }
+}
