@@ -1,10 +1,12 @@
 [
     {
         "name":"andre",
+        "displayName":"André Mattos",
         "password":"medico123"
     },
     {
-        "name":"nicolas123@gmail.com",
+        "name":"nicolas",
+        "displayName":"Nicolas Ferreira",
         "password":"medico321"
     }
 ]

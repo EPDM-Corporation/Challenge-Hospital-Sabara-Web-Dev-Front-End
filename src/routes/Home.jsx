@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import './Home.css'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer'
 
 
 const Home = () => {
+  const [userDisplay, setUserDisplay] = useState(null);
+  useEffect(() => {
+    let usuarioSalvo = JSON.parse(localStorage.getItem("user"));
+    console.log(usuarioSalvo['displayName'])
+    setUserDisplay(usuarioSalvo['displayName'])
+  }, []);
   return (
     <div>
       <Header/>
       <div id='homeContent'>
-        <h2 style={{margin:'25px'}}>Olá André Matos</h2>
-        <div className='taskPanel overflow-auto'>
+        <h2 style={{margin:'25px'}}>Olá {userDisplay}</h2>
+        <section className='taskPanel overflow-auto'>
           <div className='taskPanelTop'></div>
           {/* <div className='taskCards'>
             <div className='taskInfo'>
@@ -30,7 +36,7 @@ const Home = () => {
             </div>
             <hr />
           </div>
-        </div>
+        </section>
       </div>
       <Footer/>
     </div>

@@ -22,7 +22,9 @@ const Login = () => {
   const userLogin = (e) => {
     e.preventDefault();
     for (let i = 0; i < Dados.length; i++){
-      if (name == Dados[i]['name'] && password == Dados[i]['password']){
+      let user = Dados[i]
+      if (name == user['name'] && password == user['password']){
+        localStorage.setItem("user",JSON.stringify(user))
         Navigate('/home');
         return
       }
