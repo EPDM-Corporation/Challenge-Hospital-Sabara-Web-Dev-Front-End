@@ -9,7 +9,6 @@ const NavProfile = () => {
 
     useEffect(() => {
     let usuarioSalvo = JSON.parse(localStorage.getItem("user"));
-    console.log(usuarioSalvo['profileImage'])
     setProfileName(usuarioSalvo['displayName'])
     setProfileImage(usuarioSalvo['profileImage'])
     }, []);
