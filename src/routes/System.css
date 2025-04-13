@@ -1,3 +1,7 @@
+.systemBody{
+    background-color: #F0F8FF;
+}
+
 #systemExit{
     margin: 30px;
     color: white;
@@ -7,4 +11,38 @@
 }
 #systemExit:hover{
     text-decoration: underline;
+}
+
+.systemSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#systemH2{
+    margin: 30px;
+    font-size: 40px;
+}
+
+.systemForms{
+    align-items: center;
+    max-width: 500px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.systemButton{
+    border-radius: 30px;
+    width: 200px;
+    padding: 0.75rem;
+    background-color: #0056A3;
+    color: white;
+    border:0px;
+    margin: 20px;
+}
+.systemButton:hover{
+    background-color: #003768;
 }
