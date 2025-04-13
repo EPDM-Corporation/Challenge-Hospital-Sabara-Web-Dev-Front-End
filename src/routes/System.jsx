@@ -12,7 +12,6 @@ const System = () => {
     desc:'',
   })
 
-  const [medic, setMedic] = useState(null)
 
   const handleChange = (e) => {
     setName(e.target.value);
@@ -28,6 +27,7 @@ const System = () => {
     formData.id = Date.now();
     formData.date = new Date().toLocaleString('pt-BR');
     
+    let medic = document.getElementById('systemMedic').value;
     let localUser = localStorage.getItem(medic);
 
     if (localUser) {
@@ -39,6 +39,7 @@ const System = () => {
     localUser.push(formData);
     localStorage.setItem(medic,JSON.stringify(localUser));
     localUser = localStorage.getItem(medic);
+    console.log(localUser)
     setFormData({
       id:null,
       title:'',
@@ -60,7 +61,7 @@ const System = () => {
                 <input type="text" id="systemTitle" required onChange={(c)=>formData.title = c.target.value}></input>
 
                 <label>Médico:</label>
-                <select id="systemMedic" name="medico" required onChange={(c)=>medic = c.target.value}>
+                <select id="systemMedic" name="medico" required>
                   <option value="andre1">André</option>
                   <option value="nicolas2">Nicolas</option>
                 </select>

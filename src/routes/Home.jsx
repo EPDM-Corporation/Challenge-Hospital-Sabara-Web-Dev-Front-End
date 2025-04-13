@@ -4,25 +4,34 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 
 const Home = () => {
-  const [userDisplay, setUserDisplay] = useState(null);
-  const [tasks, setTasks] = useState([
-    // {
-    //   id:1744512211790,
-    //   title: "Entregar pacote para o quarto 205",
-    //   date: '07/03/2025 13:43',
-    //   desc: 'Entregar o pacote de água e comida para o quarto 205'
-    // },
-  ]);
+  const [userDisplay, setUserDisplay] = useState('');
+  const [tasks, setTasks] = useState([]); // Inicialize como array vazio
 
   useEffect(() => {
-    let usuarioSalvo = JSON.parse(localStorage.getItem("user"));
-    setUserDisplay(usuarioSalvo['displayName'])
+    const usuarioSalvo = JSON.parse(localStorage.getItem("user"));
+    if (usuarioSalvo) {
+      setUserDisplay(usuarioSalvo['displayName'] || '');
+      
+      const usuarioTasks = JSON.parse(localStorage.getItem(usuarioSalvo["localStorageID"]));
+      console.log(usuarioTasks)
+      setTasks(usuarioTasks || []); // Garante que seja sempre array
+      
+    }
   }, []);
 
-  const deleteTask = (taskId) =>{
-    setTasks(tasks.filter(task => task.id !== taskId))
+  const deleteTask = (taskId) => {
+    const updatedTasks = tasks.filter(task => task.id !== taskId);
+    setTasks(updatedTasks);
+    
+    const usuarioSalvo = JSON.parse(localStorage.getItem("user"));
+    if (usuarioSalvo) {
+      localStorage.setItem(
+        usuarioSalvo["localStorageID"],
+        JSON.stringify(updatedTasks)
+      );
+    }
   };
-  console.log(Date.now())
+
   return (
     <div>
       <Header/>
@@ -31,20 +40,28 @@ const Home = () => {
         <section className='taskPanel overflow-auto'>
           <div className='taskPanelTop'></div>
 
-            <div className='taskCards'>
-            {tasks.map((task) => (
-              <div key={task.id}>
-                <div className='taskInfo'>
-                  <div className='taskTitle'>{task.title}</div> 
-                  <div className='taskHour'>{task.date}</div> 
-                  <div className='taskDesc'>{task.desc}</div> 
-                  <button className='taskButton' onClick={() => deleteTask(task.id)}>Finalizar</button>
+          <div className='taskCards'>
+            {tasks.length > 0 ? (
+              tasks.map((task) => (
+                <div key={task.id}>
+                  <div className='taskInfo'>
+                    <div className='taskTitle'>{task.title}</div> 
+                    <div className='taskHour'>{task.date}</div> 
+                    <div className='taskDesc'>{task.desc}</div> 
+                    <button 
+                      className='taskButton' 
+                      onClick={() => deleteTask(task.id)}
+                    >
+                      Finalizar
+                    </button>
+                  </div>
+                  <hr />
                 </div>
-                <hr />
-              </div>
-            ))}
+              ))
+            ) : (
+              <p>Nenhuma tarefa encontrada</p> // Mensagem para lista vazia
+            )}
           </div>
-          
         </section>
       </div>
       <Footer/>
