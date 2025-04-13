@@ -16,7 +16,7 @@ const Header = () => {
         <div id='desktopDesign'>
           <div id='desktopNav'>
             <img src={Logo} alt="Logo" id="logo" height={50} />
-            <Link to={"/"} className='desktopText'>Tarefas</Link>
+            <Link to={"/home"} className='desktopText'>Tarefas</Link>
             <Link to={"/"} className='desktopText'>Sobre</Link>
           </div>
           <NavProfile/>

@@ -1,0 +1,81 @@
+import React, { useState } from 'react';
+import Footer from '../components/Footer/Footer'
+import Logo from "../assets/Logo.png"
+import {Link} from 'react-router-dom'
+import './System.css'
+
+const System = () => {
+  const [formData, setFormData] = useState({
+    id:null,
+    title:'',
+    date:'',
+    desc:'',
+  })
+
+
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
+
+
+  const formSend = (e) =>{
+    e.preventDefault();
+    if (formData.title == '' || formData.action == ''){
+      alert("Preencha todos os campos");
+      return;
+    }
+    formData.id = Date.now();
+    formData.date = new Date().toLocaleString('pt-BR');
+    
+    let medic = document.getElementById('systemMedic').value;
+    let localUser = localStorage.getItem(medic);
+
+    if (localUser) {
+      localUser = JSON.parse(localUser); 
+    } else {
+      localUser = [];
+    }
+
+    localUser.push(formData);
+    localStorage.setItem(medic,JSON.stringify(localUser));
+    localUser = localStorage.getItem(medic);
+    console.log(localUser)
+    setFormData({
+      id:null,
+      title:'',
+      date:'',
+      desc:'',
+    })
+  }
+
+  return (
+    <div className='systemBody'>
+      <header>
+        <img src={Logo} id='logo' alt="" />
+        <Link to={'/'} id='systemExit'>Sair</Link>
+      </header>
+        <section className='systemSection'>
+            <h2 id='systemH2'>Sistema</h2>
+            <form className='systemForms'>
+                <label>Título:</label>
+                <input type="text" id="systemTitle" required onChange={(c)=>formData.title = c.target.value}></input>
+
+                <label>Médico:</label>
+                <select id="systemMedic" name="medico" required>
+                  <option value="andre1">André</option>
+                  <option value="nicolas2">Nicolas</option>
+                </select>
+
+                <label>Serviço/Ação: </label>
+                <input type="text" id="systemAction" required onChange={(c)=>formData.desc = c.target.value}></input>
+                <button className='systemButton' onClick={formSend}>Enviar</button>
+                <button className='systemButton'>Resetar dados locais</button>
+            </form>
+
+        </section>
+        <Footer/>
+    </div>
+  )
+}
+
+export default System
