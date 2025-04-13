@@ -6,12 +6,12 @@ import Footer from '../components/Footer/Footer'
 const Home = () => {
   const [userDisplay, setUserDisplay] = useState(null);
   const [tasks, setTasks] = useState([
-    {
-      id:1744512211790,
-      title: "Entregar pacote para o quarto 205",
-      date: '07/03/2025 13:43',
-      desc: 'Entregar o pacote de água e comida para o quarto 205'
-    },
+    // {
+    //   id:1744512211790,
+    //   title: "Entregar pacote para o quarto 205",
+    //   date: '07/03/2025 13:43',
+    //   desc: 'Entregar o pacote de água e comida para o quarto 205'
+    // },
   ]);
 
   useEffect(() => {
@@ -31,22 +31,20 @@ const Home = () => {
         <section className='taskPanel overflow-auto'>
           <div className='taskPanelTop'></div>
 
-          <div className='taskCards'>
-          {tasks.map((task) => (
-            <div key={task.id}>
-              <div className='taskInfo'>
-                <div className='taskTitle'>{task.title}</div> 
-                <div className='taskHour'>{task.date}</div> 
-                <div className='taskDesc'>{task.desc}</div> 
-                <button className='taskButton' onClick={() => deleteTask(task.id)}>Finalizar</button>
+            <div className='taskCards'>
+            {tasks.map((task) => (
+              <div key={task.id}>
+                <div className='taskInfo'>
+                  <div className='taskTitle'>{task.title}</div> 
+                  <div className='taskHour'>{task.date}</div> 
+                  <div className='taskDesc'>{task.desc}</div> 
+                  <button className='taskButton' onClick={() => deleteTask(task.id)}>Finalizar</button>
+                </div>
+                <hr />
               </div>
-              <hr />
-            </div>
-          ))}
-        </div>
-
-
-
+            ))}
+          </div>
+          
         </section>
       </div>
       <Footer/>

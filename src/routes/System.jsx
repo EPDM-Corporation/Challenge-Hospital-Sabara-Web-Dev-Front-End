@@ -1,10 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Footer from '../components/Footer/Footer'
 import Logo from "../assets/Logo.png"
 import {Link} from 'react-router-dom'
 import './System.css'
 
 const System = () => {
+  const [formData, setFormData] = useState({
+    id:null,
+    title:'',
+    date:'',
+    desc:'',
+  })
+
+  const [medic, setMedic] = useState(null)
+
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
+
+
+  const formSend = (e) =>{
+    e.preventDefault();
+    if (formData.title == '' || formData.action == ''){
+      alert("Preencha todos os campos");
+      return;
+    }
+    formData.id = Date.now();
+    formData.date = new Date().toLocaleString('pt-BR');
+    
+    let localUser = localStorage.getItem(medic);
+
+    if (localUser) {
+      localUser = JSON.parse(localUser); 
+    } else {
+      localUser = [];
+    }
+
+    localUser.push(formData);
+    localStorage.setItem(medic,JSON.stringify(localUser));
+    localUser = localStorage.getItem(medic);
+    setFormData({
+      id:null,
+      title:'',
+      date:'',
+      desc:'',
+    })
+  }
+
   return (
     <div className='systemBody'>
       <header>
@@ -14,19 +56,19 @@ const System = () => {
         <section className='systemSection'>
             <h2 id='systemH2'>Sistema</h2>
             <form className='systemForms'>
-                <label for="systemTitle">Título:</label>
-                <input type="text" id="systemTitle"></input>
+                <label>Título:</label>
+                <input type="text" id="systemTitle" required onChange={(c)=>formData.title = c.target.value}></input>
 
-                <label for="systemMedic">Médico:</label>
-                <select id="systemMedic" name="medico">
+                <label>Médico:</label>
+                <select id="systemMedic" name="medico" required onChange={(c)=>medic = c.target.value}>
                   <option value="andre1">André</option>
                   <option value="nicolas2">Nicolas</option>
                 </select>
 
-                <label for="systemAction">Serviço/Ação: </label>
-                <input type="text" id="systemAction"></input>
-                <button className='systemButton'>Enviar</button>
-                <button className='systemButton'>Resetar dados</button>
+                <label>Serviço/Ação: </label>
+                <input type="text" id="systemAction" required onChange={(c)=>formData.desc = c.target.value}></input>
+                <button className='systemButton' onClick={formSend}>Enviar</button>
+                <button className='systemButton'>Resetar dados locais</button>
             </form>
 
         </section>
