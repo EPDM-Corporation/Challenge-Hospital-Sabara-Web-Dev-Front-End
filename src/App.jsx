@@ -1,22 +1,25 @@
-import Login from './routes/Login.jsx'
-import Home from './routes/Home.jsx'
 import Error from './routes/Error.jsx'
+import Home from './routes/Home.jsx'
+import Login from './routes/Login.jsx'
+import Sobre from './routes/Sobre.jsx'
 import System from './routes/System.jsx'
-import { BrowserRouter,Routes, Route } from 'react-router-dom'
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 function App() {
 
   return (
-  <BrowserRouter>
+    <BrowserRouter>
 
-    <Routes>
-      <Route path='/' element={<Login/>}/>
-      <Route path='/home' element={<Home/>}/>
-      <Route path='*' element={<Error/>}/>
-      <Route path='/system' element={<System/>}/>
-    </Routes>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='*' element={<Error />} />
+        <Route path='/system' element={<System />} />
+        <Route path='/sobre' element={<Sobre />} />
+      </Routes>
 
-  </BrowserRouter>
-    
+    </BrowserRouter>
+
   )
 }
 
