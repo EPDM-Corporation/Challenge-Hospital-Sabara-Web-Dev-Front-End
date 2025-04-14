@@ -1,9 +1,9 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './NavBurger.css'
-import NavProfile from '../NavProfile/NavProfile'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import NavProfile from '../NavProfile/NavProfile';
+import './NavBurger.css';
 
 
 const NavBurger = () => {
@@ -26,7 +26,7 @@ const NavBurger = () => {
         aria-labelledby="menuLateralLabel"
       >
         <div className="offcanvas-header">
-          <NavProfile/>
+          <NavProfile />
           <button
             type="button"
             className="btn-close btn-close-white"
@@ -38,7 +38,7 @@ const NavBurger = () => {
         <div className="offcanvas-body">
           <ul className="list-unstyled">
             <li><Link to={"/home"} className='navText'>Tarefas</Link></li>
-            <li><Link to={"/"} className='navText'>Sobre</Link></li>
+            <li><Link to={"/sobre"} className='navText'>Sobre</Link></li>
           </ul>
         </div>
       </div>
