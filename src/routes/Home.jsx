@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer'
 
 const Home = () => {
   const [userDisplay, setUserDisplay] = useState('');
-  const [tasks, setTasks] = useState([]); // Inicialize como array vazio
+  const [tasks, setTasks] = useState([]); 
 
   useEffect(() => {
     const usuarioSalvo = JSON.parse(localStorage.getItem("user"));
@@ -13,8 +13,7 @@ const Home = () => {
       setUserDisplay(usuarioSalvo['displayName'] || '');
       
       const usuarioTasks = JSON.parse(localStorage.getItem(usuarioSalvo["localStorageID"]));
-      console.log(usuarioTasks)
-      setTasks(usuarioTasks || []); // Garante que seja sempre array
+      setTasks(usuarioTasks || []); 
       
     }
   }, []);
