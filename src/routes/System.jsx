@@ -19,7 +19,6 @@ const System = () => {
 
 
   const formSend = (e) =>{
-    e.preventDefault();
     if (formData.title == '' || formData.action == ''){
       alert("Preencha todos os campos");
       return;
@@ -36,10 +35,11 @@ const System = () => {
       localUser = [];
     }
 
+    
     localUser.push(formData);
     localStorage.setItem(medic,JSON.stringify(localUser));
     localUser = localStorage.getItem(medic);
-    console.log(localUser)
+    alert("Notificação enviada!")
     setFormData({
       id:null,
       title:'',
