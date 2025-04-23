@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
-import Footer from '../components/Footer/Footer'
-import Logo from "../assets/Logo.png"
-import {Link} from 'react-router-dom'
-import './System.css'
+import { Link } from 'react-router-dom';
+import Logo from "../assets/Logo.png";
+import Footer from '../components/Footer/Footer';
+import './System.css';
 
 const System = () => {
   const [formData, setFormData] = useState({
-    id:null,
-    title:'',
-    date:'',
-    desc:'',
+    id: null,
+    title: '',
+    date: '',
+    desc: '',
   })
 
-
-  const handleChange = (e) => {
-    setName(e.target.value);
-  };
 
 
   const formSend = (e) =>{
@@ -25,27 +21,28 @@ const System = () => {
     }
     formData.id = Date.now();
     formData.date = new Date().toLocaleString('pt-BR');
-    
+
     let medic = document.getElementById('systemMedic').value;
     let localUser = localStorage.getItem(medic);
 
     if (localUser) {
-      localUser = JSON.parse(localUser); 
+      localUser = JSON.parse(localUser);
     } else {
       localUser = [];
     }
 
     
     localUser.push(formData);
-    localStorage.setItem(medic,JSON.stringify(localUser));
+    localStorage.setItem(medic, JSON.stringify(localUser));
     localUser = localStorage.getItem(medic);
     alert("Notificação enviada!")
     setFormData({
-      id:null,
-      title:'',
-      date:'',
-      desc:'',
+      id: null,
+      title: '',
+      date: '',
+      desc: '',
     })
+    alert("Dados enviados!")
   }
 
   return (
@@ -54,26 +51,26 @@ const System = () => {
         <img src={Logo} id='logo' alt="" />
         <Link to={'/'} id='systemExit'>Sair</Link>
       </header>
-        <section className='systemSection'>
-            <h2 id='systemH2'>Sistema</h2>
-            <form className='systemForms'>
-                <label>Título:</label>
-                <input type="text" id="systemTitle" required onChange={(c)=>formData.title = c.target.value}></input>
+      <section className='systemSection'>
+        <h2 id='systemH2'>Sistema</h2>
+        <form className='systemForms'>
+          <label>Título:</label>
+          <input type="text" id="systemTitle" required onChange={(c) => formData.title = c.target.value}></input>
 
-                <label>Médico:</label>
-                <select id="systemMedic" name="medico" required>
-                  <option value="andre1">André</option>
-                  <option value="nicolas2">Nicolas</option>
-                </select>
+          <label>Médico:</label>
+          <select id="systemMedic" name="medico" required>
+            <option value="andre1">André</option>
+            <option value="nicolas2">Nicolas</option>
+          </select>
 
-                <label>Serviço/Ação: </label>
-                <input type="text" id="systemAction" required onChange={(c)=>formData.desc = c.target.value}></input>
-                <button className='systemButton' onClick={formSend}>Enviar</button>
-                <button className='systemButton'>Resetar dados locais</button>
-            </form>
+          <label>Serviço/Ação: </label>
+          <input type="text" id="systemAction" required onChange={(c) => formData.desc = c.target.value}></input>
+          <button className='systemButton' onClick={formSend}>Enviar</button>
+          <button className='systemButton'>Resetar dados locais</button>
+        </form>
 
-        </section>
-        <Footer/>
+      </section>
+      <Footer />
     </div>
   )
 }
