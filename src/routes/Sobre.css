@@ -1,0 +1,34 @@
+body{
+    background-color: #F0F8FF;
+}
+#sobre{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#sobreSection{
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 30px;
+    height: 320px;
+    width: 80%;
+    max-width: 1035px;
+    margin: 20px;
+    overflow: auto;
+}
+#sobreTitle{
+    text-align: center;
+    padding: 10px;
+}
+#sobreP{
+    font-size: 20px;
+    padding: 10px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    #sobreSection{
+        height:600px;
+    }
+}
