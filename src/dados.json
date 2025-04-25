@@ -3,14 +3,14 @@
         "name":"andre",
         "displayName":"André Mattos",
         "password":"medico123",
-        "profileImage":"/src/assets/andrepfp.png",
+        "profileImage":"/images/andrepfp.png",
         "localStorageID":"andre1"
     },
     {
         "name":"nicolas",
         "displayName":"Nicolas Ferreira",
         "password":"medico321",
-        "profileImage":"/src/assets/nicolaspfp.png",
+        "profileImage":"/images/nicolaspfp.png",
         "localStorageID":"nicolas2"
     }
 ]
