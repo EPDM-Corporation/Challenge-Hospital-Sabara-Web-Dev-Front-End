@@ -19,7 +19,7 @@ const Sobre = () => {
 
                 <div id='sobreSection'>
                     <h2 id='sobreTitle'>Proposta de Solução da Equipe EPDM</h2>
-                    <p id='sobreP' className='overflow'>Diante desses desafios, nossa equipe EPDM se uniu para desenvolver uma solução eficaz.
+                    <p id='sobreP'>Diante desses desafios, nossa equipe EPDM se uniu para desenvolver uma solução eficaz.
                          Pensamos em aprimorar o sistema de atendimento do hospital, tornando-o o mais simples e funcional possível 
                          para médicos e enfermeiros. Entre as melhorias propostas, destacam-se a automatização das agendas de cada profissional 
                          e a organização dos atendimentos em formato de lista, contendo a ordem dos próximos pacientes e as respectivas informações

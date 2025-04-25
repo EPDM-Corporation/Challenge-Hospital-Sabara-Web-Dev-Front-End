@@ -15,6 +15,7 @@ const System = () => {
 
 
   const formSend = (e) =>{
+    e.preventDefault();
     if (formData.title == '' || formData.action == ''){
       alert("Preencha todos os campos");
       return;
@@ -42,6 +43,7 @@ const System = () => {
       desc: '',
     })
     alert("Dados enviados!")
+    window.location.reload();
   }
   const formReset = () =>{
     localStorage.clear();
@@ -56,9 +58,9 @@ const System = () => {
       </header>
       <section className='systemSection'>
         <h2 id='systemH2'>Sistema</h2>
-        <form className='systemForms'>
+        <form className='systemForms' >
           <label>Título:</label>
-          <input type="text" id="systemTitle" required onChange={(c) => formData.title = c.target.value}></input>
+          <input type="text" id="systemTitle" onChange={(c) => formData.title = c.target.value}></input>
 
           <label>Médico:</label>
           <select id="systemMedic" name="medico">
@@ -67,7 +69,7 @@ const System = () => {
           </select>
 
           <label>Serviço/Ação: </label>
-          <input type="text" id="systemAction" required onChange={(c) => formData.desc = c.target.value}></input>
+          <input type="text" id="systemAction" onChange={(c) => formData.desc = c.target.value}></input>
           <button className='systemButton' onClick={formSend}>Enviar</button>
           
         </form>
