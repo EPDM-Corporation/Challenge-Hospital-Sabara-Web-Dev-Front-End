@@ -35,7 +35,6 @@ const System = () => {
     localUser.push(formData);
     localStorage.setItem(medic, JSON.stringify(localUser));
     localUser = localStorage.getItem(medic);
-    alert("Notificação enviada!")
     setFormData({
       id: null,
       title: '',
@@ -44,7 +43,11 @@ const System = () => {
     })
     alert("Dados enviados!")
   }
+  const formReset = () =>{
+    localStorage.clear();
+    alert("Dados resetados")
 
+  }
   return (
     <div className='systemBody'>
       <header>
@@ -58,7 +61,7 @@ const System = () => {
           <input type="text" id="systemTitle" required onChange={(c) => formData.title = c.target.value}></input>
 
           <label>Médico:</label>
-          <select id="systemMedic" name="medico" required>
+          <select id="systemMedic" name="medico">
             <option value="andre1">André</option>
             <option value="nicolas2">Nicolas</option>
           </select>
@@ -66,9 +69,9 @@ const System = () => {
           <label>Serviço/Ação: </label>
           <input type="text" id="systemAction" required onChange={(c) => formData.desc = c.target.value}></input>
           <button className='systemButton' onClick={formSend}>Enviar</button>
-          <button className='systemButton'>Resetar dados locais</button>
+          
         </form>
-
+        <button className='systemButton' onClick={formReset}>Resetar dados locais</button>
       </section>
       <Footer />
     </div>
