@@ -1,12 +1,23 @@
-# React + Vite
+# HealthTask
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto para o challenge do Hospital Sabará. Tem como o objetivo de solucionar os problemas do hospital, que são identificados pela nossa equipe.
 
-Currently, two official plugins are available:
+# Funcionalidades
+- Design Responsivo.
+- Sistema de lista de tarefas, como adicionar e deletar as tarefas de cada conta.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Dependências
+- Necessário instalar NPM caso queira verificar o site através do VScode.
 
-## Expanding the ESLint configuration
+ # Contas e Senhas
+ - Nome: andre ; Senha: medico123 
+ - Nome: nicolas ; Senha: medico321
+ - Nome: sistema ; Senha: 123
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Integrantes
+- Erik Kaiyu Suguiyama
+- Guilherme Vital
+- Lucas Guerreiro
+- Belton Lee Carr 
+
+Este projeto é apenas um protótipo, não utilizar para uso real devido a falta de segurança como criptografia e banco de dadaos.
