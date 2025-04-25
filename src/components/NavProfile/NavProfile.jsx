@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import './NavProfile.css'
-import Image from '/public/andrepfp.png'
 
 const NavProfile = () => {
     const [profileName, setProfileName] = useState(null);

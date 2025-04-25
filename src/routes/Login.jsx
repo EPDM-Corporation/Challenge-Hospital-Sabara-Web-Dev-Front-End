@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from "../assets/Logo.png";
+import Image from "/src/assets/Logo.png";
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import Dados from '../dados.json'

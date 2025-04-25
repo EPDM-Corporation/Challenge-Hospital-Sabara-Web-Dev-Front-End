@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from "../assets/Logo.png";
+import Logo from "/src/assets/Logo.png";
 import Footer from '../components/Footer/Footer';
 import './System.css';
 

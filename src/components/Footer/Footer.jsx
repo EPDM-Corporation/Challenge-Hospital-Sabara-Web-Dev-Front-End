@@ -1,9 +1,9 @@
 import React from 'react'
 import './Footer.css'
-import Facebook from '../../assets/icons/Facebook.png'
-import Instagram from '../../assets/icons/instagram.png'
-import Youtube from '../../assets/icons/youtube.png'
-import Linkedin from '../../assets/icons/linkedin.png'
+import Facebook from '/src/assets/icons/Facebook.png'
+import Instagram from '/src/assets/icons/instagram.png'
+import Youtube from '/src/assets/icons/youtube.png'
+import Linkedin from '/src/assets/icons/linkedin.png'
 
 const Footer = () => {
   return (
