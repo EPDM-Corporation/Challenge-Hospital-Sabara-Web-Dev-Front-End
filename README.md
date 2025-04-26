@@ -7,7 +7,7 @@ Este é um projeto para o challenge do Hospital Sabará. Tem como o objetivo de 
 - Sistema de lista de tarefas, como adicionar e deletar as tarefas de cada conta.
 
 # Dependências
-- Necessário instalar NPM caso queira verificar o site através do VScode.
+- Necessário instalar pacote NPM caso queira verificar o site através do VScode.
 
  # Contas e Senhas
  - Nome: andre ; Senha: medico123 
