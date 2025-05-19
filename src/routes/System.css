@@ -8,9 +8,11 @@
     font-size: 30px;
     text-decoration: none;
     font-weight: bold;
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
 }
 #systemExit:hover{
-    text-decoration: underline;
+    text-decoration-color: rgb(255, 255, 255);
 }
 
 .systemSection{
