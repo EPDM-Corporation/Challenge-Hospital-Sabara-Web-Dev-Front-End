@@ -3,6 +3,7 @@ import Home from './routes/Home.jsx'
 import Login from './routes/Login.jsx'
 import Sobre from './routes/Sobre.jsx'
 import System from './routes/System.jsx'
+import Pacientes from './routes/Pacientes.jsx'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='*' element={<Error />} />
         <Route path='/system' element={<System />} />
         <Route path='/sobre' element={<Sobre />} />
+        <Route path='/pacientes' element={<Pacientes/>}/>
       </Routes>
 
     </BrowserRouter>
