@@ -43,6 +43,7 @@
     color: white;
     border:0px;
     margin: 20px;
+    transition: 0.3s;
 }
 .systemButton:hover{
     background-color: #003768;
