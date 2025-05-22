@@ -1,5 +1,8 @@
-form div {
-  margin: 100px;
+#forms-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
 }
 
 /*# sourceMappingURL=Pacientes.css.map */
