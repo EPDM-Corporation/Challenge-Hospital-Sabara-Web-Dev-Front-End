@@ -30,10 +30,12 @@ header{
     font-size: 1.5rem;
     text-decoration: none;
     margin: 20px;
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
 }
 
 .desktopText:hover{
-    text-decoration: underline;
+    text-decoration-color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 768px) {

@@ -40,6 +40,10 @@ body{
     color: white;
     background-color: #2570AE;
     margin: 5px;
+    transition: 0.3s;
+}
+.taskButton:hover{
+    background-color: #003768;
 }
 
 @media screen and (max-width: 768px) {
