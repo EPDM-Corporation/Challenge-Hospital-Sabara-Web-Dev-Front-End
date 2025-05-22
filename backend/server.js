@@ -19,11 +19,36 @@ app.get('/pacientes', (req, res) => {
 })
 
 app.post('/pacientes', (req, res) => {
-    const { nome, descricao } = req.body;
-    if (!nome || !descricao) {
+    const { nome, idade, estado, detalhe} = req.body;
+    if (!nome || !idade || !estado || !detalhe ) {
         return res.status(400).json({ error: 'Campo Obrigatorios' })
     }
-    const novoItem = { id: uuid(), nome, descricao }
-    produtos.push(novoItem);
+    const novoItem = { id: uuid(), nome, idade, estado, detalhe }
+    pacientes.push(novoItem);
     res.status(201).json(novoItem);
+})
+
+app.put('/pacientes', (req, res) => {
+    const pacienteId = req.params.id;
+    const { nome, idade, estado, detalhe } = req.body;
+
+    if (!nome || !idade || !estado || !detalhe) {
+         return res.status(400).json({ error: 'O campo é obrigatório' })
+    }
+    const pacienteIndex = pacientes.findIndex(item => item.id === pacienteId)
+    if (pacienteIndex === -1) {
+        return res.status(404).json({ error: 'Paciente não encontrado' })
+    }
+    pacientes[pacienteIndex] = { id: pacienteId, nome, idade, estado, detalhe }
+    res.json(pacientes[pacienteIndex])
+})
+
+app.delete('/pacientes', (req, res) => {
+    const pacienteId = req.params.id;
+    const inicioPaciente = pacientes.length;
+    pacientes = pacientes.filter(item => item.id !== pacienteId)
+    if (pacientes.length === inicioPaciente) {
+        return res.status(404).json({ error: 'Paciente não encontrado' })
+    }
+    res.status.send(204)
 })
