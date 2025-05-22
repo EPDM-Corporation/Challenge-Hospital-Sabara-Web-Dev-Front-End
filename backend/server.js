@@ -17,3 +17,13 @@ let pacientes = []
 app.get('/pacientes', (req, res) => {
     res.json(pacientes)
 })
+
+app.post('/pacientes', (req, res) => {
+    const { nome, descricao } = req.body;
+    if (!nome || !descricao) {
+        return res.status(400).json({ error: 'Campo Obrigatorios' })
+    }
+    const novoItem = { id: uuid(), nome, descricao }
+    produtos.push(novoItem);
+    res.status(201).json(novoItem);
+})
