@@ -9,6 +9,19 @@ footer{
     gap: 10px;
 }
 
+#footerSocials{
+    display: flex;
+    gap: 20px;
+}
+#footerSocials > *{
+    color: white;
+    transition: color 300ms;
+}
+
+#footerSocials > *:hover{
+    color: gray;
+}
+
 #footerText{
     color: white;
     white-space: normal;
