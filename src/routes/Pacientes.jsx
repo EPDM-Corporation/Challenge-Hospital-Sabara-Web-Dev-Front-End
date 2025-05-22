@@ -1,14 +1,15 @@
 import React from 'react'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
+import Table from '../components/Table/Table'
 
 const Pacientes = () => {
   return (
-    <div>
+    <section>
         <Header/>
-        <h1>HELLO WORLD</h1>
+            <Table></Table>
         <Footer/>
-    </div>
+    </section>
   )
 }
 
