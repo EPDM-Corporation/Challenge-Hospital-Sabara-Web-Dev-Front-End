@@ -14,7 +14,6 @@ import Linkedin from '/src/assets/icons/linkedin.png'
 const Footer = () => {
   return (
     <footer>
-      <div id='footerInfo'>
         <div id='footerSocials'>
           <FontAwesomeIcon icon={faFacebook}  size='3x'/>
           <FontAwesomeIcon icon={faInstagram}  size='3x'/>
@@ -24,7 +23,6 @@ const Footer = () => {
         <div id='footerText'>
         © Projeto de gestão de tarefas  Todos os direitos reservados
         </div>
-      </div>
       
     </footer>
   )
