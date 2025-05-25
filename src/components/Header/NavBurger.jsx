@@ -38,6 +38,7 @@ const NavBurger = () => {
         <div className="offcanvas-body">
           <ul className="list-unstyled">
             <li><Link to={"/home"} className='navText'>Tarefas</Link></li>
+            <li><Link to={"/pacientes"} className='navText'>Pacientes</Link></li>
             <li><Link to={"/sobre"} className='navText'>Sobre</Link></li>
           </ul>
         </div>

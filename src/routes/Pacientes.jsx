@@ -40,33 +40,36 @@ const Pacientes = () => {
             </form>
 
           {/* TABELA */}
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Idade</th>
-                <th scope="col">Estado de Saúde</th>
-                <th scope="col">Detalhes Médicos</th>
-                <th scope="col">Ações</th>
-              </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Mark</td>
-                  <td>14</td>
-                  <td>Estável</td>
-                  <td>Dor no estomago</td>
-                  <td>e</td>
-                </tr>
-                <tr>
-                  <td>Sarah</td>
-                  <td>11</td>
-                  <td>Grave</td>
-                  <td>Perna quebrada</td>
-                  <td>e</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="table-responsive">
+              <table className="table table-striped" id="pacientes-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Idade</th>
+                    <th scope="col">Estado de Saúde</th>
+                    <th scope="col">Detalhes Médicos</th>
+                    <th scope="col">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mark</td>
+                    <td>14</td>
+                    <td>Estável</td>
+                    <td>Dor no estômago</td>
+                    <td>e</td>
+                  </tr>
+                  <tr>
+                    <td>Sarah</td>
+                    <td>11</td>
+                    <td>Grave</td>
+                    <td>Perna quebrada</td>
+                    <td>e</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
           </section>
         <Footer/>
     </section>
