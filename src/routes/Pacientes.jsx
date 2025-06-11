@@ -1,15 +1,17 @@
 import React from 'react'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
+import axios from 'axios'
 import './Pacientes.css'
+
 
 const Pacientes = () => {
   return (
     <section>
       <Header/>
-      <section id='forms-section'>
+      <section id='forms-section' className='container'>
         {/* FORMULARIO */}
-        <div className="form-wrapper">
+        <div className="form-wrapper" id='pacientes-forms'>
           <form>
             <div className="mb-3">
               <label htmlFor="nome" className="form-label">Nome</label>
@@ -42,8 +44,7 @@ const Pacientes = () => {
         </div>
 
         {/* TABELA */}
-        <div className="table-wrapper">
-          <div className="table-responsive">
+        <div className="table-wrapper container table-responsive tabela-pacientes">
             <table className="table table-striped" id="pacientes-table">
               <thead>
                 <tr>
@@ -81,7 +82,6 @@ const Pacientes = () => {
                 </tr>
               </tbody>
             </table>
-          </div>
         </div>
       </section>
       <Footer/>

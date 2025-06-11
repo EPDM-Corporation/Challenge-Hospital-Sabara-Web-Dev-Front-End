@@ -1,7 +1,25 @@
 #forms-section{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+#pacientes-forms{
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+}
+td {
+  div{
+    button{
+      margin: 10px;
+    }
+  }
+}
+
+.tabela-pacientes{
+    max-width: 800px;
 }
 @media screen and (max-width: 768px) {
     #forms-section{
