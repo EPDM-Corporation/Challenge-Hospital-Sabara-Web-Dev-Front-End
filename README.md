@@ -5,6 +5,7 @@ Este é um projeto para o challenge do Hospital Sabará. Tem como o objetivo de 
 # Funcionalidades
 - Design Responsivo.
 - Sistema de lista de tarefas, como adicionar e deletar as tarefas de cada conta.
+- Página com pacientes com sistema CRUD utilizando um banco de dados local.
 
 # Dependências
 - Necessário instalar pacote NPM caso queira verificar o site através do VScode.
