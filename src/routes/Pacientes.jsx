@@ -105,10 +105,10 @@ const Pacientes = () => {
               <label htmlFor="estado" className="form-label">Estado de Saúde</label>
               <select className="form-select" id="estado" required value={novoPaciente.estado} onChange={(e) => setNovoPaciente({...novoPaciente, estado:e.target.value})}>
                 <option value="">Selecione...</option>
-                <option value="estavel">Estável</option>
-                <option value="recuperacao">Em recuperação</option>
-                <option value="critico">Crítico</option>
-                <option value="pos-op">Pós-operatório</option>
+                <option value="Estável">Estável</option>
+                <option value="Recuperacao">Em recuperação</option>
+                <option value="Critico">Crítico</option>
+                <option value="Pós-Operação">Pós-operatório</option>
               </select>
             </div>
 
