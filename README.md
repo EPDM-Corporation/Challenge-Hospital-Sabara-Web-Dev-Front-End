@@ -8,7 +8,7 @@ Este é um projeto para o challenge do Hospital Sabará. Tem como o objetivo de 
 - Página com pacientes com sistema CRUD utilizando um banco de dados local.
 
 # Dependências
-- Necessário instalar pacote NPM caso queira verificar o site através do VScode.
+- Necessário instalar pacote NPM tanto para a pasta original quanto para a pasta backend.
 
  # Contas e Senhas
  - Nome: andre ; Senha: medico123 
@@ -21,7 +21,5 @@ Este é um projeto para o challenge do Hospital Sabará. Tem como o objetivo de 
 - Lucas Guerreiro
 - Belton Lee Carr 
 
-# Link do site
-https://healthcheckchallenge1.vercel.app/
 
 Este projeto é apenas um protótipo, não utilizar para uso real devido a falta de segurança como criptografia e banco de dadaos.
