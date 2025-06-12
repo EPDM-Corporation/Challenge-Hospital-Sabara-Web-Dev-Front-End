@@ -1,15 +1,11 @@
 import React from 'react'
+import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
-import './Footer.css'
-import Facebook from '/src/assets/facebook.png'
-import Instagram from '/src/assets/icons/instagram.png'
-import Youtube from '/src/assets/icons/youtube.png'
-import Linkedin from '/src/assets/icons/linkedin.png'
 
 const Footer = () => {
   return (
