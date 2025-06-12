@@ -9,13 +9,13 @@ const Header = () => {
   return (
     <header >
       <div id='mobileDesign'>
-        <img src={Logo} alt="Logo" id="logo" height={50} />
+       <img src={Logo} alt="Logo" id="logo" height={50} />
         <NavBurger className='teste' />
       </div>
 
       <div id='desktopDesign'>
         <div id='desktopNav'>
-          <img src={Logo} alt="Logo" id="logo" height={50} />
+          <Link to={"/home"}><img src={Logo} alt="Logo" id="logo" height={50} /></Link>
           <Link to={"/home"} className='desktopText'>Tarefas</Link>
           <Link to={"/pacientes"} className='desktopText'>Pacientes</Link>
           <Link to={"/sobre"} className='desktopText'>Sobre</Link>
