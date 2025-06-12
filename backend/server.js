@@ -28,7 +28,7 @@ app.post('/pacientes', (req, res) => {
     res.status(201).json(novoItem);
 })
 
-app.put('/pacientes', (req, res) => {
+app.put('/pacientes/:id', (req, res) => {
     const pacienteId = req.params.id;
     const { nome, idade, estado, detalhes } = req.body;
 
@@ -43,12 +43,12 @@ app.put('/pacientes', (req, res) => {
     res.json(pacientes[pacienteIndex])
 })
 
-app.delete('/pacientes', (req, res) => {
+app.delete('/pacientes/:id', (req, res) => {
     const pacienteId = req.params.id;
     const inicioPaciente = pacientes.length;
     pacientes = pacientes.filter(item => item.id !== pacienteId)
     if (pacientes.length === inicioPaciente) {
         return res.status(404).json({ error: 'Paciente não encontrado' })
     }
-    res.status.send(204)
+    res.sendStatus(204)
 })

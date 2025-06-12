@@ -143,8 +143,8 @@ const Pacientes = () => {
                   <td>{paciente.detalhes}</td>
                   <td>
                     <div className="d-flex flex-wrap">
-                      <button type="button" className="btn btn-warning btn-sm">Editar</button>
-                      <button type="button" className="btn btn-danger btn-sm">Excluir</button>
+                      <button type="button" className="btn btn-warning btn-sm" onClick={() => handleEditar(paciente)}>Editar</button>
+                      <button type="button" className="btn btn-danger btn-sm" onClick={() => deletarPaciente(paciente.id)}>Excluir</button>
                     </div>
                   </td>
                 </tr>
